@@ -1,17 +1,18 @@
-﻿<Properties GitUserInfo="UsingMD">
+﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{9362B596-BDB8-480B-BB9B-F21B72FD8753}|https">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.firstProject PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Migrations/AppDbContextModelSnapshot.cs">
     <Files>
-      <File FileName="Controllers/ItemsController.cs" Line="29" Column="35" />
-      <File FileName="Views/Items/Index.cshtml" Line="30" Column="30" />
-      <File FileName="Migrations/AppDbContextModelSnapshot.cs" Line="6" Column="61" />
+      <File FileName="firstProject.csproj" Line="1" Column="1" />
+      <File FileName="Migrations/AppDbContextModelSnapshot.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="firstProject">
-            <Node name="firstProject" selected="True" />
+            <Node name="firstProject">
+              <Node name="Migrations" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
