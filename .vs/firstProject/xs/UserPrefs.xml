@@ -1,15 +1,18 @@
 ﻿<Properties GitUserInfo="UsingMD">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.firstProject PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Items/Index.cshtml">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Controllers/ItemsController.cs" />
-      <File FileName="Views/Items/Index.cshtml" Line="10" Column="6" />
+      <File FileName="Controllers/ItemsController.cs" Line="29" Column="35" />
+      <File FileName="Views/Items/Index.cshtml" Line="30" Column="30" />
+      <File FileName="Migrations/AppDbContextModelSnapshot.cs" Line="6" Column="61" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="firstProject" selected="True" />
+          <Node name="firstProject">
+            <Node name="firstProject" selected="True" />
+          </Node>
         </State>
       </Pad>
     </Pads>

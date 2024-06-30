@@ -5,12 +5,12 @@
       "PackagePath": "staticwebassets/firstProject.bundle.scp.css"
     },
     {
-      "Id": "/Users/emanelkafrawy/Projects/firstProject/firstProject/wwwroot/css/site.css",
-      "PackagePath": "staticwebassets/css/site.css"
+      "Id": "/Users/emanelkafrawy/Projects/firstProject/firstProject/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
     },
     {
-      "Id": "/Users/emanelkafrawy/Projects/firstProject/firstProject/wwwroot/favicon.ico",
-      "PackagePath": "staticwebassets/favicon.ico"
+      "Id": "/Users/emanelkafrawy/Projects/firstProject/firstProject/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
     },
     {
       "Id": "/Users/emanelkafrawy/Projects/firstProject/firstProject/wwwroot/js/site.js",

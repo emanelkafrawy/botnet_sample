@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LpmmzExtRQPNHkuE9RONLsjsPqUQnEWLh6kEPTAqI10=",
+  "Hash": "qblwQDRAf7JfLWOoStlXapS6Oyd3o3X3HR0fR0wBYUk=",
   "Source": "firstProject",
   "BasePath": "_content/firstProject",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "/Users/emanelkafrawy/Projects/firstProject/firstProject/obj/Debug/net7.0/scopedcss/projectbundle/firstProject.bundle.scp.css"
     },
     {
+      "Identity": "/Users/emanelkafrawy/Projects/firstProject/firstProject/wwwroot/.DS_Store",
+      "SourceId": "firstProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/emanelkafrawy/Projects/firstProject/firstProject/wwwroot/",
+      "BasePath": "_content/firstProject",
+      "RelativePath": ".DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/.DS_Store"
+    },
+    {
       "Identity": "/Users/emanelkafrawy/Projects/firstProject/firstProject/wwwroot/css/site.css",
       "SourceId": "firstProject",
       "SourceType": "Discovered",
@@ -66,23 +83,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
-    },
-    {
-      "Identity": "/Users/emanelkafrawy/Projects/firstProject/firstProject/wwwroot/favicon.ico",
-      "SourceId": "firstProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/emanelkafrawy/Projects/firstProject/firstProject/wwwroot/",
-      "BasePath": "_content/firstProject",
-      "RelativePath": "favicon.ico",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
       "Identity": "/Users/emanelkafrawy/Projects/firstProject/firstProject/wwwroot/js/site.js",
