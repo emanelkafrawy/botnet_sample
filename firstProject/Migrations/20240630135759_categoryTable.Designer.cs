@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using firstProject.Data;
 
@@ -11,9 +12,11 @@ using firstProject.Data;
 namespace firstProject.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240630135759_categoryTable")]
+    partial class categoryTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -37,28 +40,6 @@ namespace firstProject.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Select Category"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Computers"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Mobiles"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Electric machines"
-                        });
                 });
 
             modelBuilder.Entity("firstProject.Models.Item", b =>

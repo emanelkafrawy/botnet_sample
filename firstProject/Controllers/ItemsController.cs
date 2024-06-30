@@ -2,6 +2,9 @@
 using firstProject.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.CodeAnalysis.Options;
+using Microsoft.EntityFrameworkCore;
+
 namespace firstProject.Controllers
 {
     public class ItemsController: Controller
@@ -14,30 +17,31 @@ namespace firstProject.Controllers
 
         public IActionResult Index()
         {
-            IEnumerable<Models.Item> itemsList = _db.Items.ToList();
+            IEnumerable<Item> itemsList = _db.Items.Include(c => c.Category).ToList();
             return View(itemsList);
         }
 
         //Get
         public IActionResult New()
         {
+            CreateSelectList();
             return View();
         }
 
         // POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult New(Models.Item item)
+        public IActionResult New(Item item)
         {
             if(item.Price > 100)
             {
                 ModelState.AddModelError("CustomError", "price can't be above 100");
 
-                //custom error is Price or any item.value to get the error above and under the label with red color
+                //custom error is Price or any item. value to get the error above and under the label with a red color
                 //ModelState.AddModelError("Price", "price can't be above 100");
             }
 
-            if (item.CategoryId == 0)
+            if (item.CategoryId == 1)
             {
                 ModelState.AddModelError("CustomError", "invalid category");
             }
@@ -63,6 +67,7 @@ namespace firstProject.Controllers
                 return NotFound();
             }
             var item = GetItem(Id);
+            CreateSelectList(item.CategoryId);
             return View(item);
         }
 
@@ -74,16 +79,16 @@ namespace firstProject.Controllers
         // put
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Models.Item item)
+        public IActionResult Edit(Item item)
         {
             if (item.Price > 100)
             {
                 ModelState.AddModelError("CustomError", "price can't be above 100");
 
-                //custom error is Price or any item.value to get the error above and under the label with red color
+                //custom error is Price or any item. value to get the error above and under the label with red color
                 //ModelState.AddModelError("Price", "price can't be above 100");
             }
-            if (item.CategoryId == 0)
+            if (item.CategoryId == 1)
             {
                 ModelState.AddModelError("CustomError", "invalid category");
             }
@@ -110,6 +115,7 @@ namespace firstProject.Controllers
                 return NotFound();
             }
             var item = GetItem(Id);
+            CreateSelectList(item.CategoryId);
             return View(item);
         }
 
@@ -126,6 +132,13 @@ namespace firstProject.Controllers
             _db.SaveChanges();
             TempData["successData"] = "Item has been deleted successfully";
             return RedirectToAction("Index");
+        }
+
+        public void CreateSelectList (int selectId = 1)
+        {
+            //List<Category> categories = _db.Categories.ToList();
+            IEnumerable<Category> categories = _db.Categories.ToList();
+            ViewBag.Categoriylist = new SelectList(categories, "Id", "Name", selectId);
         }
     }
 }
