@@ -1,7 +1,7 @@
 ﻿using firstProject.Data;
 using firstProject.Models;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.AspNetCore.Mvc.Rendering;
 namespace firstProject.Controllers
 {
     public class ItemsController: Controller
@@ -36,7 +36,12 @@ namespace firstProject.Controllers
                 //custom error is Price or any item.value to get the error above and under the label with red color
                 //ModelState.AddModelError("Price", "price can't be above 100");
             }
-            if(ModelState.IsValid)
+
+            if (item.CategoryId == 0)
+            {
+                ModelState.AddModelError("CustomError", "invalid category");
+            }
+            if (ModelState.IsValid)
             {
                 _db.Items.Add(item);
                 _db.SaveChanges();
@@ -77,6 +82,10 @@ namespace firstProject.Controllers
 
                 //custom error is Price or any item.value to get the error above and under the label with red color
                 //ModelState.AddModelError("Price", "price can't be above 100");
+            }
+            if (item.CategoryId == 0)
+            {
+                ModelState.AddModelError("CustomError", "invalid category");
             }
             if (ModelState.IsValid)
             {
