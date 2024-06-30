@@ -5,13 +5,15 @@ namespace firstProject.Models
 {
 	public class Item
 	{
-		[Key]
+        [Key]
 		public int Id { get; set; }
 		[Required]
 		public string Name { get; set; }
 		[Required]
         public decimal Price { get; set; }
 		public DateTime createdDate { get; set; } = DateTime.Now;
+        [Required]
+        public int CategoryId { get; set; }
     }
 }
 
